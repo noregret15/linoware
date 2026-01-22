@@ -32,12 +32,12 @@ local Library = {
     FontColor = Color3.fromRGB(245, 245, 245);
     MainColor = Color3.fromRGB(20, 20, 20);
     BackgroundColor = Color3.fromRGB(15, 15, 15);
-    AccentColor = Color3.fromRGB(100, 150, 255);
+    AccentColor = Color3.fromRGB(255, 100, 100);
     OutlineColor = Color3.fromRGB(60, 60, 60);
     RiskColor = Color3.fromRGB(255, 80, 80);
 
     Black = Color3.new(0, 0, 0);
-    Font = Enum.Font.Ubuntu;
+    Font = Enum.Font.ArimoBold;
 
     OpenedFrames = {};
     DependencyBoxes = {};
@@ -3002,11 +3002,10 @@ function Library:CreateWindow(...)
         BackgroundColor3 = 'BackgroundColor';
     });
 
-        local TabArea = Library:Create('Frame', {
+    local TabArea = Library:Create('Frame', {
         BackgroundTransparency = 1;
-        Position = UDim2.new(1, -8, 0, 8);
-        AnchorPoint = Vector2.new(1, 0);
-        Size = UDim2.new(0, 0, 0, 21);
+        Position = UDim2.new(0, 8, 0, 8);
+        Size = UDim2.new(1, -16, 0, 21);
         ZIndex = 1;
         Parent = MainSectionInner;
     });
@@ -3015,13 +3014,8 @@ function Library:CreateWindow(...)
         Padding = UDim.new(0, Config.TabPadding);
         FillDirection = Enum.FillDirection.Horizontal;
         SortOrder = Enum.SortOrder.LayoutOrder;
-        HorizontalAlignment = Enum.HorizontalAlignment.Right;
         Parent = TabArea;
     });
-
-    TabListLayout:GetPropertyChangedSignal('AbsoluteContentSize'):Connect(function()
-        TabArea.Size = UDim2.new(0, TabListLayout.AbsoluteContentSize.X, 0, 21);
-    end);
 
     local TabContainer = Library:Create('Frame', {
         BackgroundColor3 = Library.MainColor;
