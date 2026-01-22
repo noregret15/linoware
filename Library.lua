@@ -37,7 +37,7 @@ local Library = {
     RiskColor = Color3.fromRGB(255, 90, 90);
 
     Black = Color3.new(0, 0, 0);
-    Font = Enum.Font.SourceSansBold;
+    Font = Enum.Font.Ubuntu;
 
     OpenedFrames = {};
     DependencyBoxes = {};
