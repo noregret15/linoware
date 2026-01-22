@@ -29,15 +29,15 @@ local Library = {
 
     HudRegistry = {};
 
-    FontColor = Color3.fromRGB(245, 245, 245);
-    MainColor       = Color3.fromRGB(20, 20, 20)
-    BackgroundColor = Color3.fromRGB(15, 15, 15)
-    AccentColor     = Color3.fromRGB(100, 40, 90)
-    OutlineColor    = Color3.fromRGB(60, 60, 60)
-    RiskColor = Color3.fromRGB(255, 80, 80);
+    FontColor = Color3.fromRGB(245, 245, 245)
+    MainColor = Color3.fromRGB(18, 18, 24)
+    BackgroundColor = Color3.fromRGB(12, 12, 16)
+    AccentColor = Color3.fromRGB(140, 70, 210)
+    OutlineColor = Color3.fromRGB(45, 45, 55)
+    RiskColor = Color3.fromRGB(255, 90, 90)   
 
     Black = Color3.new(0, 0, 0);
-    Font = Enum.Font.RobotoMono;
+    Font = Enum.Font.SourceSansBold;
 
     OpenedFrames = {};
     DependencyBoxes = {};
@@ -3025,7 +3025,6 @@ function Library:CreateWindow(...)
         ZIndex = 2;
         Parent = MainSectionInner;
     });
-    
 
     Library:AddToRegistry(TabContainer, {
         BackgroundColor3 = 'MainColor';
