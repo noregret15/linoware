@@ -31,13 +31,13 @@ local Library = {
 
     FontColor = Color3.fromRGB(245, 245, 245);
     MainColor = Color3.fromRGB(18, 18, 24);
-    BackgroundColor = Color3.fromRGB(12, 12, 16);
-    AccentColor = Color3.fromRGB(150, 70, 210);
-    OutlineColor = Color3.fromRGB(45, 45, 55);
+    BackgroundColor = Color3.fromRGB(12, 12, 12);
+    AccentColor = Color3.fromRGB(255, 0, 0);
+    OutlineColor = Color3.fromRGB(45, 45, 45);
     RiskColor = Color3.fromRGB(255, 90, 90);
 
     Black = Color3.new(0, 0, 0);
-    Font = Enum.Font.ArimoBold;
+    Font = Enum.Font.JosefinSans;
 
     OpenedFrames = {};
     DependencyBoxes = {};
