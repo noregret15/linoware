@@ -30,14 +30,14 @@ local Library = {
     HudRegistry = {};
 
     FontColor = Color3.fromRGB(245, 245, 245);
-    MainColor = Color3.fromRGB(18, 18, 24);
-    BackgroundColor = Color3.fromRGB(12, 12, 12);
+    MainColor = Color3.fromRGB(24, 30, 42);
+    BackgroundColor = Color3.fromRGB(18, 22, 32);
     AccentColor = Color3.fromRGB(0, 255, 255);
     OutlineColor = Color3.fromRGB(45, 45, 45);
     RiskColor = Color3.fromRGB(255, 90, 90);
 
     Black = Color3.new(0, 0, 0);
-    Font = Enum.Font.Legacy;
+    Font = Enum.Font.Nunito;
 
     OpenedFrames = {};
     DependencyBoxes = {};
