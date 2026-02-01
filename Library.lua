@@ -1077,8 +1077,8 @@ do
 
         local ContainerLabel = Library:CreateLabel({
             TextXAlignment = Enum.TextXAlignment.Left;
-            Size = UDim2.new(1, 0, 0, 18);
-            TextSize = 13;
+            Size = UDim2.new(1, 0, 0, 16);
+            TextSize = 14;
             Visible = false;
             ZIndex = 110;
             Parent = Library.KeybindContainer;
@@ -3169,7 +3169,7 @@ function Library:CreateWindow(...)
                 BackgroundColor3 = Library.BackgroundColor;
                 BorderColor3 = Library.OutlineColor;
                 BorderMode = Enum.BorderMode.Inset;
-                Size = UDim2.new(1, 0, 0, 507 + 2);
+                Size = UDim2.new(1, 0, 0, 40);
                 ZIndex = 2;
                 Parent = Info.Side == 1 and LeftSide or RightSide;
             });
@@ -3217,8 +3217,8 @@ function Library:CreateWindow(...)
 
             local Container = Library:Create('Frame', {
                 BackgroundTransparency = 1;
-                Position = UDim2.new(0, 4, 0, 20);
-                Size = UDim2.new(1, -4, 1, -20);
+                Position = UDim2.new(0, 4, 0, 18);
+                Size = UDim2.new(1, -8, 1, -18);
                 ZIndex = 1;
                 Parent = BoxInner;
             });
