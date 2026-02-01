@@ -1972,7 +1972,7 @@ do
         local SliderOuter = Library:Create('Frame', {
             BackgroundColor3 = Color3.new(0, 0, 0);
             BorderColor3 = Color3.new(0, 0, 0);
-            Size = UDim2.new(1, -6, 0, 10);
+            Size = UDim2.new(1, -10, 0, 10);
             ZIndex = 5;
             Parent = Container;
         });
