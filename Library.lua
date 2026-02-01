@@ -1946,10 +1946,11 @@ do
             Min = Info.Min;
             Max = Info.Max;
             Rounding = Info.Rounding;
-            MaxSize = 232;
+            MaxSize = 200;
             Type = 'Slider';
             Callback = Info.Callback or function(Value) end;
         };
+
 
         local Groupbox = self;
         local Container = Groupbox.Container;
@@ -1971,10 +1972,11 @@ do
         local SliderOuter = Library:Create('Frame', {
             BackgroundColor3 = Color3.new(0, 0, 0);
             BorderColor3 = Color3.new(0, 0, 0);
-            Size = UDim2.new(1, -4, 0, 13);
+            Size = UDim2.new(1, -6, 0, 10);
             ZIndex = 5;
             Parent = Container;
         });
+
 
         Library:AddToRegistry(SliderOuter, {
             BorderColor3 = 'Black';
@@ -2022,8 +2024,7 @@ do
 
         local DisplayLabel = Library:CreateLabel({
             Size = UDim2.new(1, 0, 1, 0);
-            TextSize = 14;
-            Text = 'Infinite';
+            TextSize = 12;
             ZIndex = 9;
             Parent = SliderInner;
         });
