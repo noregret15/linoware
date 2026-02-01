@@ -3005,14 +3005,15 @@ function Library:CreateWindow(...)
     local TabArea = Library:Create('Frame', {
         BackgroundTransparency = 1;
         Position = UDim2.new(0, 8, 0, 8);
-        Size = UDim2.new(1, -16, 0, 21);
+        Size = UDim2.new(0, 120, 1, -16);
         ZIndex = 1;
         Parent = MainSectionInner;
     });
 
     local TabListLayout = Library:Create('UIListLayout', {
         Padding = UDim.new(0, Config.TabPadding);
-        FillDirection = Enum.FillDirection.Horizontal;
+        FillDirection = Enum.FillDirection.Vertical;
+        HorizontalAlignment = Enum.HorizontalAlignment.Left;
         SortOrder = Enum.SortOrder.LayoutOrder;
         Parent = TabArea;
     });
@@ -3020,8 +3021,8 @@ function Library:CreateWindow(...)
     local TabContainer = Library:Create('Frame', {
         BackgroundColor3 = Library.MainColor;
         BorderColor3 = Library.OutlineColor;
-        Position = UDim2.new(0, 8, 0, 30);
-        Size = UDim2.new(1, -16, 1, -38);
+        Position = UDim2.new(0, 136, 0, 8);
+        Size = UDim2.new(1, -144, 1, -16);
         ZIndex = 2;
         Parent = MainSectionInner;
     });
@@ -3046,7 +3047,7 @@ function Library:CreateWindow(...)
         local TabButton = Library:Create('Frame', {
             BackgroundColor3 = Library.BackgroundColor;
             BorderColor3 = Library.OutlineColor;
-            Size = UDim2.new(0, TabButtonWidth + 8 + 4, 1, 0);
+            Size = UDim2.new(1, -4, 0, 28);
             ZIndex = 1;
             Parent = TabArea;
         });
@@ -3057,8 +3058,10 @@ function Library:CreateWindow(...)
         });
 
         local TabButtonLabel = Library:CreateLabel({
-            Position = UDim2.new(0, 0, 0, 0);
-            Size = UDim2.new(1, 0, 1, -1);
+            Position = UDim2.new(0, 6, 0, 0);
+            Size = UDim2.new(1, -12, 1, 0);
+            TextXAlignment = Enum.TextXAlignment.Left;
+            TextYAlignment = Enum.TextYAlignment.Center;
             Text = Name;
             ZIndex = 1;
             Parent = TabButton;
@@ -3067,8 +3070,8 @@ function Library:CreateWindow(...)
         local Blocker = Library:Create('Frame', {
             BackgroundColor3 = Library.MainColor;
             BorderSizePixel = 0;
-            Position = UDim2.new(0, 0, 1, 0);
-            Size = UDim2.new(1, 0, 0, 1);
+            Position = UDim2.new(0, 0, 0, 0);
+            Size = UDim2.new(0, 2, 1, 0);
             BackgroundTransparency = 1;
             ZIndex = 3;
             Parent = TabButton;
