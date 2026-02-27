@@ -42,19 +42,19 @@ function Library:CreateWindow(Parametrs)
 	})
 
 	local WindowOutline = CreateObj("Frame", {
-		Parent = WindowFrame,
-		Size = UDim2.new(1, -4, 1, -4),
-		Position = UDim2.new(0,  2, 0,  2),
-		BackgroundColor3 = Library.Theme.BackgroundOutline2,
-		BorderSizePixel = 0
+    	Parent = WindowFrame,
+    	Size = UDim2.new(1, -2, 1, -2),
+    	Position = UDim2.new(0, 1, 0, 1),
+    	BackgroundColor3 = Library.Theme.BackgroundOutline2,
+    	BorderSizePixel = 0
 	})
 
 	local WindowInner = CreateObj("Frame", {
-		Parent = WindowOutline,
-		Size = UDim2.new(1, -4, 1, -4),
-		Position = UDim2.new(0,  2, 0,  2),
-		BackgroundColor3 = Library.Theme.BackgroundOutline1,
-		BorderSizePixel = 0
+    	Parent = WindowOutline,
+    	Size = UDim2.new(1, -2, 1, -2),
+    	Position = UDim2.new(0, 1, 0, 1),
+    	BackgroundColor3 = Library.Theme.BackgroundOutline1,
+    	BorderSizePixel = 0
 	})
 end
 
