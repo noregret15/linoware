@@ -20,15 +20,13 @@ local function CreateObj(Class, Parametrs)
     if not Class or not Parametrs then return end
     local Obj = Instance.new(Class)
     table.insert(getfenv().Objects, Obj)
-    for _,p in pairs(Parametrs) do
-        Obj[_]=p
-    end
+    for p,v in pairs(Parametrs) do Obj[p]=v end
+    return Obj
 end
 
 function Library:CreateWindow(Parametrs)
     if not Parametrs then return end
-    if typeof(Parametrs[1]) ~= "string" then return end
-    if not Parametrs[2] then return end
+    if typeof(Parametrs["Name"]) ~= "string" then return end
 
     local WindowFrame = CreateObj("Frame",{
         Parent = ScreenGui__,
