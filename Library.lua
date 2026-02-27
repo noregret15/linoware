@@ -3,7 +3,7 @@ local CoreGui = game:GetService("CoreGui")
 
 local Library = {
     Theme = {
-        BackgroundOutline1 = Color3.new(0.02, 0.02, 0.02),
+        BackgroundOutline1 = Color3.fromRGB(50, 50, 180),
         BackgroundOutline2 = Color3.new(0.30, 0.015, 0.015),
         Background = Color3.new(0.1, 0.1, 0.1)
     }
