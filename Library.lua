@@ -3,7 +3,7 @@ local CoreGui = game:GetService("CoreGui")
 
 local Library = {
     Theme = {
-        BackgroundOutline1 = Color3.new(0.08, 0.08, 0.08),
+        BackgroundOutline1 = Color3.new(0.02, 0.02, 0.02),
         BackgroundOutline2 = Color3.new(0.30, 0.015, 0.015),
         Background = Color3.new(0.1, 0.1, 0.1)
     }
@@ -44,7 +44,7 @@ function Library:CreateWindow(Parametrs)
 	local WindowOutline = CreateObj("Frame", {
 		Parent = WindowFrame,
 		Size = UDim2.new(1, -4, 1, -4),
-		Position = UDim2.new(0, 1, 0, 1),
+		Position = UDim2.new(0,  2, 0,  2),
 		BackgroundColor3 = Library.Theme.BackgroundOutline2,
 		BorderSizePixel = 0
 	})
@@ -52,7 +52,7 @@ function Library:CreateWindow(Parametrs)
 	local WindowInner = CreateObj("Frame", {
 		Parent = WindowOutline,
 		Size = UDim2.new(1, -4, 1, -4),
-		Position = UDim2.new(0, 2, 0, 2),
+		Position = UDim2.new(0,  2, 0,  2),
 		BackgroundColor3 = Library.Theme.BackgroundOutline1,
 		BorderSizePixel = 0
 	})
