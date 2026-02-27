@@ -67,11 +67,12 @@ function Library:CreateWindow(Parametrs)
     local TitleLabel = CreateObj("TextLabel", {
         Parent = TitleInner,
         Size = UDim2.new(1, 0, 1, 0),
-        Position = UDim2.new(0, 0, 0, 0),
+        Position = UDim2.new(0, 10, 0, 0),
         BackgroundTransparency = 1,
         Text = Parametrs.Name,
         TextColor3 = Color3.new(1, 1, 1),
         TextScaled = false,
+        TextSize = 18,
         Font = Enum.Font.Code,
         TextXAlignment = Enum.TextXAlignment.Left
     })
