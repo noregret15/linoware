@@ -15,6 +15,7 @@ local ScreenGui__ = Instance.new("ScreenGui")
 ScreenGui__.Parent = CoreGui
 ScreenGui__.IgnoreGuiInset = true
 ScreenGui__.ResetOnSpawn = false
+ScreenGui__.DisplayOrder = 10000
 
 local function CreateObj(Class, Parametrs)
     if not Class or not Parametrs then return end
@@ -30,10 +31,11 @@ function Library:CreateWindow(Parametrs)
 
     local WindowFrame = CreateObj("Frame",{
         Parent = ScreenGui__,
-        Size = UDim2.new(450,0,550,0),
+        Size = UDim2.new(200,0,300,0),
         Position = UDim2.new(0.5,0,0.5,0),
         BackgroundColor3 = Library.Theme.Background,
         BackgroundTransparency = 0,
+        BorderSizePixel = 0,
         Visible = true
     })
 end
