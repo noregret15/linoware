@@ -43,7 +43,7 @@ function Library:CreateWindow(Parametrs)
 
 	local WindowOutline = CreateObj("Frame", {
 		Parent = WindowFrame,
-		Size = UDim2.new(1, -2, 1, -2),
+		Size = UDim2.new(1, -4, 1, -4),
 		Position = UDim2.new(0, 1, 0, 1),
 		BackgroundColor3 = Library.Theme.BackgroundOutline2,
 		BorderSizePixel = 0
