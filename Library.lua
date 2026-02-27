@@ -32,7 +32,7 @@ function Library:CreateWindow(Parametrs)
 
 	local WindowFrame = CreateObj("Frame",{
 		Parent = ScreenGui__,
-		Size = UDim2.new(0, 400, 0, 250),
+		Size = UDim2.new(0, 500, 0, 550),
 		AnchorPoint = Vector2.new(0.5, 0.5),
 		Position = UDim2.new(0.5, 0, 0.5, 0),
 		BackgroundColor3 = Library.Theme.Background,
