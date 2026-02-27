@@ -27,35 +27,70 @@ local function CreateObj(Class, Parametrs)
 end
 
 function Library:CreateWindow(Parametrs)
-	if not Parametrs then return end
-	if typeof(Parametrs["Name"]) ~= "string" then return end
+    if not Parametrs then return end
+    if typeof(Parametrs["Name"]) ~= "string" then return end
 
-	local WindowFrame = CreateObj("Frame",{
-		Parent = ScreenGui__,
-		Size = UDim2.new(0, 500, 0, 550),
-		AnchorPoint = Vector2.new(0.5, 0.5),
-		Position = UDim2.new(0.5, 0, 0.5, 0),
-		BackgroundColor3 = Library.Theme.Background,
-		BackgroundTransparency = 0,
-		BorderSizePixel = 0,
-		Visible = true
-	})
+    local WindowFrame = CreateObj("Frame",{
+        Parent = ScreenGui__,
+        Size = UDim2.new(0, 500, 0, 550),
+        AnchorPoint = Vector2.new(0.5, 0.5),
+        Position = UDim2.new(0.5, 0, 0.5, 0),
+        BackgroundColor3 = Library.Theme.Background,
+        BackgroundTransparency = 0,
+        BorderSizePixel = 0,
+        Visible = true
+    })
 
-	local WindowOutline = CreateObj("Frame", {
-    	Parent = WindowFrame,
-    	Size = UDim2.new(1, -2, 1, -2),
-    	Position = UDim2.new(0, 1, 0, 1),
-    	BackgroundColor3 = Library.Theme.BackgroundOutline2,
-    	BorderSizePixel = 0
-	})
+    local TitleFrame = CreateObj("Frame", {
+        Parent = WindowFrame,
+        Size = UDim2.new(1, 0, 0, 40),
+        Position = UDim2.new(0, 0, 0, 0),
+        BackgroundTransparency = 1
+    })
 
-	local WindowInner = CreateObj("Frame", {
-    	Parent = WindowOutline,
-    	Size = UDim2.new(1, -2, 1, -2),
-    	Position = UDim2.new(0, 1, 0, 1),
-    	BackgroundColor3 = Library.Theme.BackgroundOutline1,
-    	BorderSizePixel = 0
-	})
+    local TitleOutline = CreateObj("Frame", {
+        Parent = TitleFrame,
+        Size = UDim2.new(1, -2, 1, -2),
+        Position = UDim2.new(0, 1, 0, 1),
+        BackgroundColor3 = Library.Theme.BackgroundOutline2,
+        BorderSizePixel = 0
+    })
+
+    local TitleInner = CreateObj("Frame", {
+        Parent = TitleOutline,
+        Size = UDim2.new(1, -2, 1, -2),
+        Position = UDim2.new(0, 1, 0, 1),
+        BackgroundColor3 = Library.Theme.BackgroundOutline1,
+        BorderSizePixel = 0
+    })
+
+    local TitleLabel = CreateObj("TextLabel", {
+        Parent = TitleInner,
+        Size = UDim2.new(1, 0, 1, 0),
+        Position = UDim2.new(0, 0, 0, 0),
+        BackgroundTransparency = 1,
+        Text = Parametrs.Name or "Window",
+        TextColor3 = Color3.new(1, 1, 1),
+        TextScaled = true,
+        Font = Enum.Font.GothamBold,
+        TextXAlignment = Enum.TextXAlignment.Left
+    })
+
+    local WindowOutline = CreateObj("Frame", {
+        Parent = WindowFrame,
+        Size = UDim2.new(1, -2, 1, -42),
+        Position = UDim2.new(0, 1, 0, 41),
+        BackgroundColor3 = Library.Theme.BackgroundOutline2,
+        BorderSizePixel = 0
+    })
+
+    local WindowInner = CreateObj("Frame", {
+        Parent = WindowOutline,
+        Size = UDim2.new(1, -2, 1, -2),
+        Position = UDim2.new(0, 1, 0, 1),
+        BackgroundColor3 = Library.Theme.BackgroundOutline1,
+        BorderSizePixel = 0
+    })
 end
 
 return Library
