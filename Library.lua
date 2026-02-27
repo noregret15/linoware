@@ -35,7 +35,7 @@ function Library:CreateWindow(Parametrs)
         Position = UDim2.new(0.5,0,0.5,0),
         BackgroundColor3 = Library.Theme.Background,
         BackgroundTransparency = 0,
-        BorderSizePixel = 0,
+        BorderColor3 = Library.Theme.BackgroundOutline,
         Visible = true
     })
 end
