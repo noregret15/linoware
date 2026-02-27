@@ -69,10 +69,10 @@ function Library:CreateWindow(Parametrs)
         Size = UDim2.new(1, 0, 1, 0),
         Position = UDim2.new(0, 0, 0, 0),
         BackgroundTransparency = 1,
-        Text = Parametrs.Name or "Window",
+        Text = Parametrs.Name,
         TextColor3 = Color3.new(1, 1, 1),
-        TextScaled = true,
-        Font = Enum.Font.GothamBold,
+        TextScaled = false,
+        Font = Enum.Font.Code,
         TextXAlignment = Enum.TextXAlignment.Left
     })
 
